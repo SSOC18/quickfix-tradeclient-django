@@ -1,0 +1,56 @@
+        <h1>Order Details</h1>
+	<form method="POST">
+                {% csrf_token %}
+
+                <label><b>Action:</b></label><br />
+                {{ form.action }}
+                <p>&nbsp;</p>
+
+                <label><b>Version:</b></label><br />
+                {{ form.version }}
+                <p>&nbsp;</p>
+
+                <label><b>ClOrdId:</b></label><br />
+		{{ form.clordid }}
+                <p>&nbsp;</p>
+
+                <label><b>Price:</b></label>
+                <p><i>Only accepting maximum 5% deviation from current live price</i></p>
+		{{ form.price }}
+                <p>&nbsp;</p>
+
+		<label><b>Symbol:</b></label>
+                <p><i>Only accepting BTCUSD trades</i></p>
+		{{ form.symbol }}
+                <p>&nbsp;</p>
+
+                <label><b>OrderQty:</b></label>
+                <p><i>Only accepting less than 100</i></p>
+		{{ form.ordqty }}
+                <p>&nbsp;</p>
+
+                <label><b>Side:</b></label><br />
+                {{ form.side }}
+                <p>&nbsp;</p>
+
+                <label><b>OrdType:</b></label>		
+                <p><i>Limit orders only</i></p>
+                {{ form.ordtype }}
+                <p>&nbsp;</p>
+
+                <label><b>TimeInForce:</b></label><br />
+                {{ form.timeinforce }}
+                <p>&nbsp;</p>
+
+                <label><b>SenderCompID:</b></label><br />
+		{{ form.senderid }}
+                <p>&nbsp;</p>
+
+                <label><b>TargetCompID:</b></label><br />
+		{{ form.targetid }}
+                <p>&nbsp;</p>
+
+                <label><b>TargetSubID:</b></label><br />
+		{{ form.targetsubid }}
+		<input type="submit">
+	</form>

@@ -3,7 +3,15 @@ Django Web User Interface that take required inputs and sends it to a quickfix t
 
 Installation
 ------------
-Make sure latest Python and Django are installed.
+Make sure latest Python and Django are installed, as well as the required dependencies. These may include (enter command to install):
+```
+pip install django
+pip install matplotlib
+pip install django-celery
+pip install pika
+pip install plotly
+```
+
 Navigate to the `quickfix-tradeclient-django` repository directory, and run command
 
 ```
